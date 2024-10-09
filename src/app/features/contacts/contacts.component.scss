@@ -1,0 +1,144 @@
+.contacts {
+  padding: 30px 15px;
+  min-height: 83.5vh;
+  height: 100%;
+  background-color: #3E2C1D;
+  color: #E4D3B0;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info {
+    margin-bottom: 20px;
+    background-color: #E4D3B0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #3E2C1D;
+    }
+
+    p {
+      font-size: 1rem;
+      gap: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      color: #3E2C1D;
+      padding: 5px 0;
+      strong {
+        font-weight: bold;
+        color: #8C6D4B;
+      }
+    }
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-group {
+      label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #3E2C1D;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 12px 0;
+        border: 1px solid #B8A082;
+        border-radius: 5px;
+        font-size: 0.95rem;
+        background-color: #E4D3B0;
+      }
+
+      .error-message {
+        color: #E4D3B0;;
+        font-size: 0.9rem;
+        margin-top: 5px;
+        font-weight: bold;
+      }
+    }
+
+    .btn {
+      background-color: #8C6D4B;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+
+      &:hover {
+        background-color: #705339;
+      }
+    }
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .contact-info {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      strong {
+        font-size: 0.9rem;
+        display: block;
+      }
+    }
+
+    .contact-form {
+      .form-group {
+        label {
+          font-size: 0.95rem;
+        }
+
+        input {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

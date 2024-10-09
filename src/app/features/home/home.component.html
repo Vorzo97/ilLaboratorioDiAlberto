@@ -1,0 +1,28 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Artigianato Unico: Panchine, Lampadari e Sedie da Pedane di EPAL</h1>
+    <p>Trasformiamo pallet in arredi sostenibili, unici e personalizzati. Scopri la nostra collezione artigianale.</p>
+    <a routerLink="catalog" class="btn">Scopri i prodotti</a>
+  </section>
+
+  <!-- Galleria Prodotti -->
+  <section class="products">
+    <h2>La Nostra Collezione</h2>
+    <div class="product-grid">
+      <div class="product" *ngFor="let product of productsExample">
+        <img [src]="product.image" [alt]="product.name">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sezione Artigianalità -->
+  <section class="craftsmanship">
+    <h2>Perché Scegliere i Nostri Prodotti</h2>
+    <p>I nostri prodotti sono realizzati interamente a mano, utilizzando pallet di EPAL riciclati. Ogni pezzo è unico, riflettendo l'artigianato e la passione per il legno.</p>
+    <p>Scegliere i nostri arredi significa optare per un prodotto sostenibile, fatto con materiali di recupero e con un design rustico e moderno allo stesso tempo.</p>
+  </section>
+</div>

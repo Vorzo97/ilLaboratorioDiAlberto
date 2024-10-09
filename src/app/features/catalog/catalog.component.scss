@@ -1,0 +1,68 @@
+.catalog {
+  padding: 50px 20px;
+  background-color: #3E2C1D; /* Beige chiaro per coerenza */
+  color: #E4D3B0;
+  text-align: center;
+
+  .submenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+
+    .submenu-item {
+      background-color: #E4D3B0; /* Colore chiaro legno per uniformità */
+      color: #3E2C1D; /* Colore marrone scuro per contrasto */
+      cursor: pointer;
+      border: 2px solid #8C6D4B; /* Colore marrone medio per la cornice */
+      border-radius: 5px;
+      padding: 12px 18px;
+      flex: 1;
+      max-width: 200px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #A68F6F; /* Un dorato caldo per l'hover */
+        transform: scale(1.05);
+        color: #FFF;
+        border-color: #A68F6F;
+      }
+
+      &.active {
+        background-color: #6C5A3D; /* Colore marrone scuro per attivo */
+        color: #FFF;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .submenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .submenu-item {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 15px;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .catalog {
+    padding: 30px 15px;
+
+    .submenu {
+      gap: 8px;
+
+      .submenu-item {
+        font-size: 1rem;
+        padding: 8px 0;
+      }
+    }
+  }
+}

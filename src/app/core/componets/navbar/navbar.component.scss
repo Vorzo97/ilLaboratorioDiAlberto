@@ -1,0 +1,40 @@
+.navbar {
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  background-color: #1A1A1A; // Un grigio molto scuro per un aspetto elegante
+  gap: 4vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Ombra più marcata per profondità
+
+  span {
+    font-size: 1.5rem;
+    color: #F0DDAF; // Un beige chiaro più caldo per contrasto
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      color: #CFAA7E; // Un dorato caldo per l'interazione
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    span {
+      font-size: 1rem;
+    }
+  }
+}

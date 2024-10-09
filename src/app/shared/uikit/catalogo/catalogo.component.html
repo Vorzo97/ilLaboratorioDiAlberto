@@ -1,0 +1,33 @@
+<div class="common-section">
+  <h1>{{ sectionTitle }}</h1>
+  <p>{{ sectionDescription }}</p>
+
+  <div class="product-list">
+    <div class="product-item" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.name">
+      <h3>{{ product.name }}</h3>
+      <p class="price" [ngClass]="{'discounted': product.discountPercentage > 0}">
+        {{ product.price | currency }}
+      </p>
+      <ng-container *ngIf="product.discountPercentage > 0">
+        <p class="discount">{{ product.oldPrice | currency }}
+          <span class="discount-percentage">(-{{ product.discountPercentage }}%)</span>
+        </p>
+      </ng-container>
+      <ng-container *ngIf="product.discountPercentage == 0">
+        <p class="discount">
+          <span class="discount-percentage"></span>
+        </p>
+      </ng-container>
+      <p class="description">{{ product.description }}</p>
+      <!-- <button class="buy-button">Acquista</button> -->
+    </div>
+  </div>
+
+  <div class="contact-info">
+    <h2>Contattaci per ulteriori informazioni</h2>
+    <p><strong>Email: </strong> laboratorioAlberto&#64;hotmail.com</p>
+    <p><strong>Telefono: </strong> +39 123 456 7890</p>
+  </div>
+
+</div>
